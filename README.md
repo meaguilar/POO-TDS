@@ -35,5 +35,6 @@ Cada semana incluye los proyectos **ATM** y **Registro Civil**, donde se desarro
 
 ## 📥 Uso del Repositorio
 
-Este repositorio está destinado únicamente para la descarga y consulta del contenido.  
+- Este repositorio está destinado únicamente para la descarga y consulta del contenido.  
+
 Puedes **clonar** el repositorio para obtener una copia local de los proyectos; sin embargo, no se deben realizar `pull requests` ni modificaciones, ya que su propósito es servir como material de apoyo y distribución del contenido del curso.
