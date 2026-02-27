@@ -19,17 +19,17 @@ El propósito de este repositorio es:
 
 Cada semana incluye los proyectos **ATM** y **Registro Civil**, donde se desarrollan y aplican los temas estudiados.
 
-Unidad-01
+- Unidad-01
   - 📁 Semana-01
   - 📁 Semana-02
-Unidad-02
+- Unidad-02
   - 📁 Semana-03
   - 📁 Semana-04
-Unidad-03
+- Unidad-03
   - 📁 Semana-05
-Unidad-04
+- Unidad-04
   - 📁 Semana-06
-Unidad-05
+- Unidad-05
   - 📁 Semana-07
   - 📁 Semana-08
 
