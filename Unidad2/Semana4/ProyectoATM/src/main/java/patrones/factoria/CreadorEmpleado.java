@@ -36,7 +36,7 @@ public  abstract class CreadorEmpleado extends PersonaSistema implements Autenti
     );
 
     public boolean bloquearCuenta(Usuario usuario) {
-        usuario.setActivo(false);
+        usuario.setActivo(activo);
         return true;
     }
 
