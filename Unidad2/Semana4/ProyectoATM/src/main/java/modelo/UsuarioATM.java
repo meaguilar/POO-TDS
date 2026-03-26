@@ -14,6 +14,16 @@ public class UsuarioATM extends Usuario {
         this.saldo = saldo;
     }
 
+    public String getPin() {
+        return pin;
+    }
+    public String getNumeroTarjeta() {
+        return numeroTarjeta;
+    }
+    public double getSaldo() {
+        return saldo;
+    }
+
     public double retirar(double monto) {
         if (monto > 0 && monto <= saldo) {
             saldo -= monto;

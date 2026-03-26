@@ -13,6 +13,18 @@ public abstract class Usuario extends PersonaSistema implements Autenticable {
         this.activo = true;
     }
 
+    public String getUsuario() {
+        return usuario;
+    }
+    public String getContrasena() {
+        return contrasena;
+    }
+    public boolean isActivo() {
+        return activo;
+    }
+    public void setActivo(boolean activo) {
+        this.activo = activo;
+    }
     public void cambiarContrasena(String nuevaContrasena) {
         this.contrasena = nuevaContrasena;
     }
