@@ -1,4 +1,8 @@
-package modelo;
+package patrones.factoria;
+
+import modelo.Autenticable;
+import modelo.PersonaSistema;
+import modelo.Usuario;
 
 // Cambia a clase abstracta
 public  abstract class CreadorEmpleado extends PersonaSistema implements Autenticable {
@@ -32,7 +36,7 @@ public  abstract class CreadorEmpleado extends PersonaSistema implements Autenti
     );
 
     public boolean bloquearCuenta(Usuario usuario) {
-        usuario.activo = false;
+        usuario.setActivo(false);
         return true;
     }
 

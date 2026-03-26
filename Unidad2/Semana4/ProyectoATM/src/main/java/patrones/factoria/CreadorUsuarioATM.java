@@ -1,4 +1,7 @@
-package modelo;
+package patrones.factoria;
+
+import modelo.Usuario;
+import modelo.UsuarioATM;
 
 public class CreadorUsuarioATM extends CreadorEmpleado {
 
