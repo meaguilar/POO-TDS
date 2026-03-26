@@ -1,7 +1,7 @@
-import modelo.CreadorEmpleado;
+import patrones.factoria.CreadorEmpleado;
 import modelo.UsuarioATM;
 import modelo.Usuario;
-import modelo.CreadorUsuarioATM;
+import patrones.factoria.CreadorUsuarioATM;
 
 public class Main {
 
