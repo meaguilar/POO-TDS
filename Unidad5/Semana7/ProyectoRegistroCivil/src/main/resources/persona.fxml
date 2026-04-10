@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefWidth="600" prefHeight="450"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controlador.PersonaControlador">
+
+    <!-- MENÚ -->
+    <top>
+        <MenuBar>
+            <Menu text="Registrador">
+                <MenuItem text="Guardar" onAction="#guardarPersona"/>
+                <MenuItem text="Buscar" onAction="#buscarPersonaMenu"/>
+            </Menu>
+        </MenuBar>
+    </top>
+
+    <!-- CONTENIDO -->
+    <center>
+        <VBox spacing="25" alignment="CENTER">
+
+            <padding>
+                <Insets top="30" right="40" bottom="30" left="40"/>
+            </padding>
+
+            <Label text="DATOS DEL REGISTRADOR"
+                   style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+
+            <GridPane hgap="20" vgap="20" alignment="CENTER">
+
+                <!-- ID -->
+                <Label text="ID:" style="-fx-font-size: 16px;"
+                       GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <TextField fx:id="txtId" prefWidth="250"
+                           GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                <!-- Nombre -->
+                <Label text="Nombre:" style="-fx-font-size: 16px;"
+                       GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <TextField fx:id="txtNombre" prefWidth="250"
+                           GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                <!-- Apellido -->
+                <Label text="Apellido:" style="-fx-font-size: 16px;"
+                       GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                <TextField fx:id="txtApellido" prefWidth="250"
+                           GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+            </GridPane>
+
+            <HBox spacing="20" alignment="CENTER">
+                <Button fx:id="btnPersona" text="Guardar"
+                        onAction="#setBtnCRUD"
+                        prefWidth="140" prefHeight="40"/>
+            </HBox>
+
+        </VBox>
+    </center>
+
+</BorderPane>
