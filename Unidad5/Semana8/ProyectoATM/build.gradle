@@ -1,0 +1,39 @@
+plugins {
+    id 'java'
+    id 'application'
+    // Plugin de JavaFX para la integración al proyecto
+    id 'org.openjfx.javafxplugin' version '0.0.13'
+}
+
+group = 'com.abc'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+javafx {
+    version = "21"
+    // Módulos de JavaFX que se incluyen:
+    // javafx.controls: componentes gráficos (botones, tablas, etc.)
+    // javafx.fxml: soporte para interfaces definidas en archivos FXML
+    modules = [ 'javafx.controls', 'javafx.fxml' ]
+}
+
+application {
+    mainClass = 'MainFX'
+}
+
+run {
+    standardInput = System.in
+}
+
+dependencies {
+    implementation("com.microsoft.sqlserver:mssql-jdbc:13.4.0.jre11")
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
