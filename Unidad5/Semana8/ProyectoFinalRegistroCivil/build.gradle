@@ -1,0 +1,65 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.13'
+    id 'org.beryx.jlink' version '3.0.1'
+}
+
+group = 'com.abc'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+javafx {
+    version = "21"
+    modules = [ 'javafx.controls', 'javafx.fxml' ]
+}
+// Agregamos la clase principal
+application {
+    mainClass = 'org.example.proyecto.MainFX'
+    mainModule = 'ProyectoRegistroCivil'
+}
+run {
+    standardInput = System.in
+}
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
+/*
+ * CONFIGURACIÓN DE jlink
+ * Genera una imagen de runtime personalizada (JDK reducido + app)
+ */
+jlink {
+    imageName = 'RegistroCivil'
+
+    launcher {
+        name = 'RegistroCivil'
+        mainClass = 'org.example.proyecto.MainFX'
+    }
+}
+
+/*
+ * CONFIGURACIÓN DE JAVADOC
+ * Genera documentación HTML del proyecto
+ */
+javadoc {
+
+    // Nivel de visibilidad de la documentación
+    options.memberLevel = JavadocMemberLevel.PROTECTED
+    // options.memberLevel = JavadocMemberLevel.PUBLIC
+    // options.memberLevel = JavadocMemberLevel.PACKAGE
+    // options.memberLevel = JavadocMemberLevel.PRIVATE
+
+    options.encoding = 'UTF-8'
+    options.author = true
+    options.version = true
+
+    // Mejora visual (HTML5 moderno)
+    options.addBooleanOption('html5', true)
+}
