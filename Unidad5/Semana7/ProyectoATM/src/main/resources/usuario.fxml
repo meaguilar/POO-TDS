@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml"
+           fx:controller="controlador.UsuarioControlador"
+           style="-fx-padding: 20;">
+
+    <!-- Contenido principal -->
+    <HBox spacing="20">
+
+        <!-- FORMULARIO -->
+        <VBox spacing="10" prefWidth="400">
+
+            <Label text="Registro de usuarios:" style="-fx-font-size:16px; -fx-font-weight:bold;"/>
+
+            <HBox spacing="10">
+                <Label text="Nombre:" minWidth="100"/>
+                <TextField fx:id="txtNombre" HBox.hgrow="ALWAYS"/>
+            </HBox>
+
+            <HBox spacing="10">
+                <Label text="Correo:" minWidth="100"/>
+                <TextField fx:id="txtCorreo" HBox.hgrow="ALWAYS"/>
+            </HBox>
+
+            <HBox spacing="10">
+                <Label text="Usuario:" minWidth="100"/>
+                <TextField fx:id="txtUsuario" HBox.hgrow="ALWAYS"/>
+            </HBox>
+
+            <HBox spacing="10">
+                <Label text="Contraseña:" minWidth="100"/>
+                <PasswordField fx:id="txtContrasena" HBox.hgrow="ALWAYS"/>
+            </HBox>
+
+            <HBox spacing="10">
+                <Label text="PIN:" minWidth="100"/>
+                <TextField fx:id="txtPin" HBox.hgrow="ALWAYS"/>
+            </HBox>
+
+            <HBox spacing="10">
+                <Label text="Saldo:" minWidth="100"/>
+                <TextField fx:id="txtSaldo" HBox.hgrow="ALWAYS"/>
+            </HBox>
+
+            <Button text="Registrar Usuario"
+                    onAction="#registrarUsuario"
+                    maxWidth="Infinity"/>
+        </VBox>
+
+        <!-- TABLA -->
+        <TableView fx:id="tablaUsuarios"
+                   HBox.hgrow="ALWAYS"
+                   maxWidth="Infinity">
+
+            <columns>
+                <TableColumn fx:id="colNombre" text="Nombre"/>
+                <TableColumn fx:id="colCorreo" text="Correo"/>
+                <TableColumn fx:id="colUsuario" text="Usuario"/>
+                <TableColumn fx:id="colContrasena" text="Contraseña"/>
+                <TableColumn fx:id="colPin" text="PIN"/>
+                <TableColumn fx:id="colNumeroCuenta" text="Numero de cuenta"/>
+                <TableColumn fx:id="colSaldo" text="Saldo inicial"/>
+                <TableColumn fx:id="colCodEmpleado" text="Codigo empleado"/>
+            </columns>
+
+        </TableView>
+
+    </HBox>
+
+    <!-- ProgressIndicator superpuesto -->
+    <ProgressIndicator fx:id="progressIndicator"
+                       visible="false"
+                       maxWidth="80" maxHeight="80"/>
+</StackPane>

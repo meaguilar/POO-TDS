@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controlador.EmpleadoControlador">
+
+    <!-- Menu -->
+    <top>
+        <MenuBar>
+            <Menu text="Empleado">
+                <MenuItem onAction="#registrarEmpleadoMenu" text="Registrar"/>
+                <MenuItem onAction="#buscarCodigoEmpleadoMenu" text="Buscar por código"/>
+            </Menu>
+            <Menu text="Usuario">
+                <MenuItem onAction="#crearUsuarios" text="Registrar Usuario"/>
+            </Menu>
+        </MenuBar>
+    </top>
+
+    <!-- CONTENIDO -->
+    <center>
+        <HBox spacing="20" style="-fx-padding: 20;">
+
+            <!-- FORMULARIO -->
+            <GridPane hgap="10" vgap="10">
+
+                <!-- TÍTULO -->
+                <Label text="Registro de empleados:"
+                       style="-fx-font-size:16px; -fx-font-weight:bold;"
+                       GridPane.rowIndex="0"
+                       GridPane.columnIndex="0"
+                       GridPane.columnSpan="2"/>
+
+                <!-- FILA 1 -->
+                <Label text="Código:" GridPane.rowIndex="1"/>
+                <TextField fx:id="txtCodigo" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+                <!-- FILA 2 -->
+                <Label text="Correo:" GridPane.rowIndex="2"/>
+                <TextField fx:id="txtCorreo" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+                <!-- FILA 3 -->
+                <Label text="Nombre completo:" GridPane.rowIndex="3"/>
+                <TextField fx:id="txtNombre" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+                <!-- FILA 4 -->
+                <Label text="Cargo:" GridPane.rowIndex="4"/>
+                <TextField fx:id="txtCargo" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+
+                <!-- FILA 5 -->
+                <Label text="Usuario:" GridPane.rowIndex="5"/>
+                <TextField fx:id="txtUsuario" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+
+                <!-- FILA 6 -->
+                <Label text="Contraseña:" GridPane.rowIndex="6"/>
+                <PasswordField fx:id="txtContrasena" GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+
+                <!-- BOTONES -->
+                <HBox spacing="10"
+                      GridPane.rowIndex="7"
+                      GridPane.columnIndex="1">
+
+                    <Button fx:id="btnCRUD" text="Registrar" onAction="#setBtnCRUD"/>
+                    <Button fx:id="btnEliminar" text="Eliminar" onAction="#eliminarEmpleado" visible="false"/>
+                </HBox>
+
+            </GridPane>
+
+            <!-- TABLA -->
+            <TableView fx:id="tablaEmpleados"
+                       HBox.hgrow="ALWAYS"
+                       maxWidth="Infinity">
+
+                <columns>
+                    <TableColumn fx:id="colCodigo" text="Código"/>
+                    <TableColumn fx:id="colNombre" text="Nombre"/>
+                    <TableColumn fx:id="colCorreo" text="Correo"/>
+                    <TableColumn fx:id="colCargo" text="Cargo"/>
+                    <TableColumn fx:id="colUsuario" text="Usuario"/>
+                    <TableColumn fx:id="colActivo" text="Activo"/>
+                </columns>
+
+            </TableView>
+
+        </HBox>
+    </center>
+
+</BorderPane>
